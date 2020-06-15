@@ -1,8 +1,5 @@
 import json
 import requests
-from get_genius_lookups import get_genius_lookups
-from scrape_song_info import scrape_song_info
-from get_spotify_uri import get_spotify_uri
 from secrets import spotify_user_id, spotify_token
 
 
