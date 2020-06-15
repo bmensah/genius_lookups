@@ -38,5 +38,5 @@
 <li> Program currently only works with Chrome broswer on a Mac, but I am working on updating the code to work on all systems and browsers. </li>
 </ul>
 
-<p> Please contact me if in using this module, you run into any other issues. </p>
+<p> Please contact me if in using this module you run into any other issues. </p>
 
