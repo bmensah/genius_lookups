@@ -28,6 +28,7 @@
   <li> HTML </li>
   <li> unicodedata </li>
   <li> json </li>
+  <li> unidecode </li>
 </ul>
 
 
