@@ -1,13 +1,14 @@
 import requests
-from secrets import spotify_user_id, spotify_token
-from scrape_song_info import scrape_song_info
-from get_genius_lookups import get_genius_lookups
+import re
+from secrets import spotify_token
 
 
 def get_spotify_uri(song, artist) -> str:
     """ given a song and an artist, return a uri to that song in Spotify """
 
-    query = "https://api.spotify.com/v1/search?query=track%3A{}+artist%3A{}&type=track&offset=0&limit=20".format(
+    song = re.sub("['|\s]", '%20', song)
+    artist = re.sub("['|\s]", '%20', artist)
+    query = "https://api.spotify.com/v1/search?q=track:{}+artist:{}&type=track&offset=0&limit=20".format(
         song, artist)
 
     response = requests.get(query, headers={
@@ -16,9 +17,9 @@ def get_spotify_uri(song, artist) -> str:
     })
 
     response_json = response.json()
-
     song_info = response_json['tracks']['items']
     if song_info:
         return song_info[0]['uri']
     else:
         return ''
+
