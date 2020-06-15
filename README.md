@@ -7,9 +7,9 @@
 
 <h3> Table of Contents </h3>
 <ul> 
-  <li <a href=#setup> Set Up </a> </li>
-  <li <a href=#modules> Modules and APIs Used </a> </li>
-  <li <a href=#issues> Issues/ToDo </a> </li>
+  <li id= "setup"> Set Up </li>
+  <li id="modules"> Modules and APIs Used </li>
+  <li id="issues"> Issues/ToDo </li>
   
 </ul>
 
